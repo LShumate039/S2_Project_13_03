@@ -49,11 +49,24 @@
 
 */
 
+var allLetters;
+var currentLetter;
+var wordLetters;
+var acrossClue;
+var downClue;
+var typeDirection;
+window.onload = init;
+
+function init() {
+      document.querySelectorAll("table#crossword span");
+      currentLetter = allLetters[0];
+      var acrossID = currentLetter.dataset.clue.a;
+      var downID = currentLetter.dataset.clue.d;
+}
 
 
 
 
-   
 
 
 
@@ -62,5 +75,5 @@
 /*====================================================*/
 
 function getChar(keyNum) {
-   return String.fromCharCode(keyNum);
+      return String.fromCharCode(keyNum);
 }
